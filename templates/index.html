@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">  
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo/Main.webp') }}" type="image/x-icon">  
+    <title>Delivery Time Prediction</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="heading">
+            <h1>Delivery Time Prediction</h1>
+        </div>
+        <form method="POST" action="/predict">
+            <div class="inputs">
+                <label for="Delivery_person_Age">Delivery Person Age :</label>
+                <input type="number" id="Delivery_person_Age" name="Delivery_person_Age" min="18" max="50" required>
+            </div>
+            <div class="inputs">
+                <label for="Delivery_person_Ratings">Delivery Person Ratings :</label>
+                <input type="number" id="Delivery_person_Ratings" name="Delivery_person_Ratings" step="0.01" min="0" max="5"
+                    required>
+            </div>
+            <div class="inputs">
+                <label for="Weather_conditions">Weather Conditions:</label>
+                <select id="Weather_conditions" name="Weather_conditions" required>
+                    <option value="Fog">Fog</option>
+                    <option value="Stormy">Stormy</option>
+                    <option value="Cloudy">Cloudy</option>
+                    <option value="Sandstorms">Sandstorms</option>
+                    <option value="Windy">Windy</option>
+                    <option value="Sunny">Sunny</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="Road_traffic_density">Road Traffic Density:</label>
+                <select id="Road_traffic_density" name="Road_traffic_density" required>
+                    <option value="Low">Low</option>
+                    <option value="Jam">Jam</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+    
+            <div class="inputs">
+                <label for="Vehicle_condition">Vehicle Condition :</label>
+                <select id="Vehicle_condition" name="Vehicle_condition" required>
+                    <option value="0">Worst</option>
+                    <option value="1">Poor</option>
+                    <option value="2">Good</option>
+                    <option value="3">Best</option>
+                </select>
+            </div>
+
+            <div class="inputs">
+                <label for="multiple_deliveries">Multiple Deliveries :</label>
+                <select id="multiple_deliveries" name="multiple_deliveries" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="distance">Distance:</label>
+                <input type="number" id="distance" name="distance" step="0.01" required>
+            </div>
+            <div class="inputs">
+                <label for="Type_of_order">Type of Order:</label>
+                <select id="Type_of_order" name="Type_of_order" required>
+                    <option value="Snack">Snack</option>
+                    <option value="Meal">Meal</option>
+                    <option value="Drinks">Drinks</option>
+                    <option value="Buffet">Buffet</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="Type_of_vehicle">Type of Vehicle:</label>
+                <select id="Type_of_vehicle" name="Type_of_vehicle" required>
+                    <option value="motorcycle">Motorcycle</option>
+                    <option value="scooter">Scooter</option>
+                    <option value="electric_scooter">Electric Scooter</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="Festival">Festival:</label>
+                <select id="Festival" name="Festival" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label for="City">Destination City:</label>
+                <select id="City" name="City" required>
+                    <option value="Metropolitian">Metropolitian</option>
+                    <option value="Urban">Urban</option>
+                    <option value="Semi-Urban">Semi-Urban</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">Predict</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

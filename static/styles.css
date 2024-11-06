@@ -1,0 +1,103 @@
+
+
+
+
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* Centered container styling for form and heading */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px; 
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Form container styling */
+form {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    width: 100%; 
+    transition: transform 0.3s;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+.heading h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); 
+    background-color: #2a5298;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.inputs label {
+    font-weight: 600;
+    color: #4a90e2;
+    margin-bottom: 0.5rem;
+}
+
+.inputs input,
+.inputs select {
+    padding: 0.8rem;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9fafc;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.inputs input:focus,
+.inputs select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+    outline: none;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #357abd, #2a5298);
+    transform: scale(1.02);
+}
+
